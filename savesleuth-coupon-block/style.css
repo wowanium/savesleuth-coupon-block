@@ -1,0 +1,382 @@
+
+.sscb-coupon {
+  border: 1px solid #dbe4ff;
+  border-radius: 22px;
+  padding: 22px;
+  margin: 18px 0 28px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, .08);
+}
+
+.sscb-toprow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.sscb-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sscb-discount,
+.sscb-status {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.sscb-discount {
+  background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+  color: #fff;
+}
+
+.sscb-status {
+  background: #e0e7ff;
+  color: #1d4ed8;
+}
+
+.sscb-storemeta {
+  color: #475569;
+  font-size: 14px;
+}
+
+.sscb-storelabel {
+  font-weight: 700;
+}
+
+.sscb-headline {
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.sscb-variant-compact .sscb-headline {
+  font-size: 20px;
+}
+
+.sscb-description {
+  margin: 0 0 14px;
+  color: #334155;
+}
+
+.sscb-mainrow {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.sscb-codepanel {
+  flex: 1 1 340px;
+  min-width: 290px;
+}
+
+.sscb-codewrap {
+  position: relative;
+  min-height: 94px;
+  border: 2px dashed #8fb4ff;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);
+  padding: 16px 18px;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px rgba(59,130,246,.12);
+  isolation: isolate;
+}
+
+.sscb-codewrap:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+.sscb-codewrap:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(37,99,235,.08), inset 0 0 0 1px rgba(59,130,246,.12);
+}
+
+.sscb-codewrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(37,99,235,0) 0%, rgba(37,99,235,.02) 100%);
+  pointer-events: none;
+}
+
+
+.sscb-code-mask,
+.sscb-code-full {
+  position: relative;
+  z-index: 1;
+}
+
+.sscb-code-full[hidden] {
+  display: none !important;
+}
+
+.sscb-reveal-curtain {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  bottom: 6px;
+  left: 34%;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(37,99,235,.98) 0%, rgba(59,130,246,.96) 55%, rgba(96,165,250,.94) 100%);
+  box-shadow: -12px 0 30px rgba(37,99,235,.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: transform .48s cubic-bezier(.22,1,.36,1), opacity .28s ease;
+  pointer-events: none;
+}
+
+.sscb-curtain-text {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.sscb-revealed .sscb-codewrap {
+  border-style: solid;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37,99,235,.10), inset 0 0 0 1px rgba(59,130,246,.08);
+}
+
+.sscb-revealed .sscb-reveal-curtain {
+  transform: translateX(108%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sscb-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: stretch;
+  flex: 0 1 280px;
+}
+
+.sscb-shop-link,
+.sscb-review-link {
+  border-radius: 12px;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-weight: 800;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  min-height: 48px;
+}
+
+.sscb-shop-link {
+  background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+  color: #fff;
+  flex: 1 1 140px;
+}
+
+.sscb-review-link {
+  background: transparent;
+  color: #111827;
+  border-color: #cbd5e1;
+  flex: 1 1 140px;
+}
+
+.sscb-feedback {
+  min-height: 1.3em;
+  margin-top: 10px;
+  color: #047857;
+  font-weight: 700;
+}
+
+.sscb-note {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.sscb-variant-compact {
+  padding: 18px;
+}
+
+.sscb-variant-compact .sscb-mainrow {
+  gap: 12px;
+  align-items: center;
+}
+
+.sscb-variant-compact .sscb-codepanel {
+  flex-basis: 250px;
+  min-width: 220px;
+}
+
+.sscb-variant-compact .sscb-codewrap {
+  min-height: 76px;
+  font-size: 24px;
+}
+
+.sscb-variant-compact .sscb-reveal-curtain {
+  left: 32%;
+}
+
+@media (max-width: 700px) {
+  .sscb-coupon {
+    padding: 18px;
+  }
+
+  .sscb-headline {
+    font-size: 21px;
+  }
+
+  .sscb-mainrow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sscb-codepanel,
+  .sscb-actions {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .sscb-codewrap {
+    width: 100%;
+    font-size: 24px;
+    min-height: 82px;
+  }
+
+  .sscb-reveal-curtain {
+    left: 38%;
+  }
+
+  .sscb-show-code,
+  .sscb-shop-link,
+  .sscb-review-link {
+    flex: 1 1 100%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .sscb-coupon {
+    padding: 14px;
+    margin: 14px 0 20px;
+    border-radius: 16px;
+  }
+
+  .sscb-toprow {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .sscb-badges {
+    gap: 8px;
+  }
+
+  .sscb-discount,
+  .sscb-status {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .sscb-storemeta {
+    font-size: 12px;
+  }
+
+  .sscb-headline {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .sscb-description {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .sscb-mainrow {
+    gap: 10px;
+  }
+
+  .sscb-codepanel {
+    min-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .sscb-codewrap {
+    min-height: 68px;
+    padding: 12px 14px;
+    font-size: 22px;
+    letter-spacing: .10em;
+    border-radius: 14px;
+  }
+
+  .sscb-reveal-curtain {
+    left: 42%;
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    border-radius: 10px;
+  }
+
+  .sscb-curtain-text {
+    font-size: 10px;
+    padding: 0 8px;
+  }
+
+  .sscb-actions {
+    flex: 1 1 100%;
+    gap: 8px;
+  }
+
+  .sscb-shop-link,
+  .sscb-review-link {
+    min-height: 40px;
+    padding: 10px 12px;
+    font-size: 14px;
+    border-radius: 10px;
+    flex: 1 1 100%;
+  }
+
+  .sscb-note,
+  .sscb-feedback {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  .sscb-variant-compact {
+    padding: 14px;
+  }
+
+  .sscb-variant-compact .sscb-headline {
+    font-size: 18px;
+  }
+
+  .sscb-variant-compact .sscb-codewrap {
+    min-height: 62px;
+    font-size: 20px;
+  }
+}
